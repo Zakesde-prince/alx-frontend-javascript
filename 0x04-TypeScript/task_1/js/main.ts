@@ -47,7 +47,7 @@ console.log("Directors:");
 console.log(director1);
 
 // Interface for the printTeacher function
-interface printTeacherFunction {
+interface function printTeacher {
   (firstName: string, lastName: string): string;
 }
 
