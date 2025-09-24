@@ -59,3 +59,4 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
 // Example usage
 console.log(printTeacher("John", "Doe"));   // Output: J. Doe
 console.log(printTeacher("Jane", "Smith")); // Output: J. Smith
+
