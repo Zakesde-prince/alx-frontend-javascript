@@ -1,21 +1,21 @@
-// Define the Teacher interface
+// Teacher interface from Task 1
 interface Teacher {
-  readonly firstName: string;        // readonly, can only be set when creating
-  readonly lastName: string;         // readonly, can only be set when creating
-  fullTimeEmployee: boolean;         // required
-  location: string;                  // required
-  yearsOfExperience?: number;        // optional
-  [key: string]: any;                // allow any additional properties
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  location: string;
+  yearsOfExperience?: number;
+  [key: string]: any;
 }
 
-// Example usage
+// Example Teacher objects
 const teacher1: Teacher = {
   firstName: "John",
   lastName: "Doe",
   fullTimeEmployee: true,
   location: "New York",
   yearsOfExperience: 5,
-  contract: true,  // additional property allowed
+  contract: true,
 };
 
 const teacher2: Teacher = {
@@ -25,14 +25,23 @@ const teacher2: Teacher = {
   location: "London",
 };
 
-const teacher3: Teacher = {
-  firstName: "Mike",
-  lastName: "Brown",
-  fullTimeEmployee: true,
-  location: "Paris",
-  contract: false,  // additional property
-};
-
+console.log("Teachers:");
 console.log(teacher1);
 console.log(teacher2);
-console.log(teacher3);
+
+// Directors interface extends Teacher
+interface Directors extends Teacher {
+  numberOfReports: number;  // required attribute for Directors
+}
+
+// Example Director object
+const director1: Directors = {
+  firstName: "Alice",
+  lastName: "Johnson",
+  fullTimeEmployee: true,
+  location: "London",
+  numberOfReports: 17,
+};
+
+console.log("Directors:");
+console.log(director1);
